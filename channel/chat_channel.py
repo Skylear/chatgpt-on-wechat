@@ -260,11 +260,11 @@ class ChatChannel(Channel):
                             + reply_text.strip()
                         )
                         reply_text = (
-                            conf().get("group_chat_reply_prefix", "") + reply_text
+                           reply_text + conf().get("group_chat_reply_prefix", "") 
                         )
                     else:
                         reply_text = (
-                            conf().get("single_chat_reply_prefix", "") + reply_text
+                             reply_text + conf().get("single_chat_reply_prefix", "")
                         )
                     reply.content = reply_text
                 elif reply.type == ReplyType.ERROR or reply.type == ReplyType.INFO:
