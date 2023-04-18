@@ -266,7 +266,8 @@ class ChatChannel(Channel):
                         reply_text = (
                              reply_text + conf().get("single_chat_reply_prefix", "") + "我是GPT "
                         )
-                    reply.content = (reply_text + "我是GPT ")
+                     reply.content = reply_text 
+                    reply.content = reply_text + "我是GPT "
                 elif reply.type == ReplyType.ERROR or reply.type == ReplyType.INFO:
                     reply.content = "[" + str(reply.type) + "]\n" + reply.content
                 elif (
